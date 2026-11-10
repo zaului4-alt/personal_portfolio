@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eduardo Luis — Electrical Engineer focused on industrial electrical systems, controls, instrumentation, embedded hardware, and testing.">
+  <title>Eduardo Luis | Electrical Engineer</title>
+  <style>
+    :root{--bg:#0b1220;--panel:#111c2e;--panel2:#152238;--text:#eef4ff;--muted:#a7b5ca;--line:#26364e;--accent:#62d5c5;--accent2:#91a9ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--accent)}
+    .hero{padding:100px 0 86px;display:grid;grid-template-columns:1.45fr .8fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:12px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.045em;margin:18px 0}
+    h1 span{color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:690px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 18px;border:1px solid var(--line);border-radius:9px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:9px}
+    .btn.primary{background:var(--accent);color:#07131a;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+    .hero-card{background:linear-gradient(145deg,#182a42,#101a2b);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 22px 60px #0005}
+    .hero-card .initials{width:76px;height:76px;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#07131a;font-size:28px;font-weight:900;margin-bottom:22px}
+    .hero-card h3{margin:0 0 8px;font-size:20px}.hero-card p{margin:0;color:var(--muted);font-size:14px}
+    .quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.fact{padding:12px;background:#ffffff08;border-radius:10px}.fact strong{display:block;color:var(--accent);font-size:19px}.fact small{color:var(--muted)}
+    section{padding:76px 0;border-top:1px solid var(--line)}.section-head{max-width:720px;margin-bottom:34px}.section-head h2{font-size:34px;line-height:1.15;margin:8px 0 12px;letter-spacing:-.03em}.section-head p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.card h3{margin:0 0 8px;font-size:19px}.card p{color:var(--muted);margin:0 0 15px}.taglist{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:12px;color:#c9d7e9;background:#ffffff0b;border:1px solid var(--line);border-radius:99px;padding:5px 10px}
+    .timeline{display:grid;gap:16px}.role{display:grid;grid-template-columns:190px 1fr;gap:26px}.date{color:var(--accent);font-size:13px;font-weight:700;padding-top:4px}.role h3{margin:0}.role .sub{color:var(--muted);font-size:14px;margin:3px 0 10px}.role ul{margin:0;padding-left:18px;color:var(--muted)}.role li{margin:5px 0}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skillbox{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:19px}.skillbox h3{font-size:15px;margin:0 0 10px;color:var(--accent)}
+    .edu{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.edu p{margin:4px 0;color:var(--muted)}.year{white-space:nowrap;color:var(--accent);font-size:14px}
+    .contact{background:linear-gradient(130deg,#13263a,#101a2b);border:1px solid var(--line);border-radius:18px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px}.contact h2{font-size:30px;margin:0 0 6px}.contact p{color:var(--muted);margin:0}
+    footer{padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:70px 0}.hero-card{max-width:480px}.skills{grid-template-columns:1fr 1fr}.navlinks{gap:13px}.navlinks a{font-size:12px}}
+    @media(max-width:560px){.wrap{width:min(100% - 30px,var(--max))}.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.grid,.skills{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:4px}.contact,.edu,footer{display:block}.year{display:block;margin-top:8px}.contact .btn{margin-top:20px}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#top">EDUARDO<span>.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Electrical Engineer · Controls · Hardware</div>
+      <h1>Building reliable systems from <span>circuit to plant.</span></h1>
+      <p class="lead">I’m Eduardo Luis, an Electrical Engineer with hands-on experience supporting industrial electrical systems, equipment troubleshooting, controls, instrumentation, and embedded hardware development.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/eduardo-luis-742614238/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="initials">EL</div>
+      <h3>Electrical Engineering</h3>
+      <p>Industrial maintenance · Electrical design · Testing & integration</p>
+      <div class="quickfacts">
+        <div class="fact"><strong>480 V</strong><small>Industrial systems exposure</small></div>
+        <div class="fact"><strong>PCB</strong><small>Design & hardware integration</small></div>
+        <div class="fact"><strong>PLC</strong><small>Ladder logic learning</small></div>
+        <div class="fact"><strong>BLE</strong><small>Embedded tracking project</small></div>
+      </div>
+    </aside>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">01 / About</div><h2>Practical engineering. Continuous learning.</h2>
+      <p>My interests sit at the intersection of electrical design, industrial automation, electronics testing, and embedded systems. I enjoy understanding how equipment works, diagnosing problems methodically, and turning technical requirements into dependable solutions.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>What I bring</h3><p>Hands-on troubleshooting with electrical and electromechanical equipment, measurement instruments, motors, drives, control panels, and field devices.</p><div class="taglist"><span class="tag">Troubleshooting</span><span class="tag">Testing</span><span class="tag">Documentation</span></div></article>
+      <article class="card"><h3>What I’m developing</h3><p>Deeper capability in PLC programming, industrial automation, HMI/SCADA systems, PCB design, and embedded hardware.</p><div class="taglist"><span class="tag">PLC / Ladder Logic</span><span class="tag">Embedded Systems</span><span class="tag">Electrical Design</span></div></article>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">02 / Experience</div><h2>Industrial electrical experience</h2><p>Experience supporting electrical maintenance and troubleshooting in an industrial pipe manufacturing environment.</p></div>
+    <div class="timeline">
+      <article class="card role">
+        <div class="date">2026 – Present</div>
+        <div><h3>Electrical Engineer</h3><div class="sub">Jindal Pipe USA · Industrial manufacturing</div>
+          <ul>
+            <li>Support troubleshooting and maintenance of industrial electrical equipment and production systems.</li>
+            <li>Work with 380/480 V electrical systems, AC/DC motors, contactors, overload protection, sensors, and control-panel components.</li>
+            <li>Use electrical test instruments including multimeters, insulation testers (Megger), and phase-sequence testers to support diagnostics.</li>
+            <li>Build knowledge of PLC I/O, motor drives, ladder logic, and industrial automation systems.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">03 / Selected Projects</div><h2>Engineering projects</h2><p>Selected academic and technical work demonstrating design, integration, and test experience.</p></div>
+    <div class="grid">
+      <article class="card"><h3>EcoTrace — Miniaturized Wildlife Tracker</h3><p>Contributed as a test engineer to a lightweight wildlife tracking concept combining GPS and Bluetooth Low Energy. The system concept included an ESP32-S3 gateway, real-time clock, and mobile-phone BLE gateway workflow.</p><div class="taglist"><span class="tag">ESP32-S3</span><span class="tag">Bluetooth LE</span><span class="tag">GPS</span><span class="tag">System Testing</span></div></article>
+      <article class="card"><h3>Industrial Electrical Troubleshooting</h3><p>Hands-on work supporting diagnosis of motor, drive, starter, protection, and field-device issues in a manufacturing environment. Emphasis on safe isolation, measurements, and systematic fault-finding.</p><div class="taglist"><span class="tag">Motors</span><span class="tag">VFDs</span><span class="tag">Contactors</span><span class="tag">Electrical Safety</span></div></article>
+      <article class="card"><h3>Embedded Systems & Microcontroller Labs</h3><p>Developed low-level microcontroller skills through MSP432 work involving assembly, LCD interfacing, timers, ADC, and stepper-motor control.</p><div class="taglist"><span class="tag">MSP432</span><span class="tag">Assembly</span><span class="tag">ADC</span><span class="tag">Timers</span></div></article>
+      <article class="card"><h3>Battery Monitoring & Cell Balancing</h3><p>Worked with a BQ76920-based battery monitoring and balancing concept, building experience with battery measurement, protection, and electronics integration.</p><div class="taglist"><span class="tag">BQ76920</span><span class="tag">Battery Monitoring</span><span class="tag">Electronics</span></div></article>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">04 / Technical Skills</div><h2>Tools, systems & capabilities</h2></div>
+    <div class="skills">
+      <div class="skillbox"><h3>Electrical & Industrial</h3><div class="taglist"><span class="tag">Circuit Analysis</span><span class="tag">480 V Systems</span><span class="tag">AC/DC Motors</span><span class="tag">Contactors & OLRs</span><span class="tag">Sensors</span><span class="tag">VFDs</span></div></div>
+      <div class="skillbox"><h3>Controls & Embedded</h3><div class="taglist"><span class="tag">PLC Fundamentals</span><span class="tag">Ladder Logic</span><span class="tag">MSP432</span><span class="tag">ESP32</span><span class="tag">BLE</span><span class="tag">ADC / Timers</span></div></div>
+      <div class="skillbox"><h3>Software & Test</h3><div class="taglist"><span class="tag">AutoCAD</span><span class="tag">Altium</span><span class="tag">MATLAB / Simulink</span><span class="tag">Multisim</span><span class="tag">LabVIEW</span><span class="tag">Oscilloscope</span></div></div>
+    </div>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">05 / Education</div><h2>Education</h2></div>
+    <div class="card edu"><div><h3>B.S. Electronic Systems Engineering Technology</h3><p>Texas A&M University</p><p>Minors: Cybersecurity and Engineering Project Management</p></div><div class="year">May 2026</div></div>
+    <div style="height:14px"></div>
+    <div class="card edu"><div><h3>Associate-level studies in Electrical Engineering</h3><p>Houston Community College</p><p>Honors · Phi Theta Kappa</p></div></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact"><div><div class="eyebrow">06 / Contact</div><h2>Let’s connect.</h2><p>Open to opportunities in electrical engineering, electrical design, controls, and hardware testing.</p></div>
+      <a class="btn primary" href="https://www.linkedin.com/in/eduardo-luis-742614238/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+    </div>
+  </div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> Eduardo Luis</span><span>Electrical Engineering Portfolio</span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
