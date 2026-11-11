@@ -1,127 +1,1633 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Eduardo Luis — Electrical Engineer focused on industrial electrical systems, controls, instrumentation, embedded hardware, and testing.">
-  <title>Eduardo Luis | Electrical Engineer</title>
-  <style>
-    :root{--bg:#0b1220;--panel:#111c2e;--panel2:#152238;--text:#eef4ff;--muted:#a7b5ca;--line:#26364e;--accent:#62d5c5;--accent2:#91a9ff;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(11,18,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.02em}.brand span{color:var(--accent)}
-    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--accent)}
-    .hero{padding:100px 0 86px;display:grid;grid-template-columns:1.45fr .8fr;gap:60px;align-items:center}
-    .eyebrow{color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:12px}
-    h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-.045em;margin:18px 0}
-    h1 span{color:var(--accent)}.lead{font-size:18px;color:var(--muted);max-width:690px}
-    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 18px;border:1px solid var(--line);border-radius:9px;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:9px}
-    .btn.primary{background:var(--accent);color:#07131a;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
-    .hero-card{background:linear-gradient(145deg,#182a42,#101a2b);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 22px 60px #0005}
-    .hero-card .initials{width:76px;height:76px;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#07131a;font-size:28px;font-weight:900;margin-bottom:22px}
-    .hero-card h3{margin:0 0 8px;font-size:20px}.hero-card p{margin:0;color:var(--muted);font-size:14px}
-    .quickfacts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.fact{padding:12px;background:#ffffff08;border-radius:10px}.fact strong{display:block;color:var(--accent);font-size:19px}.fact small{color:var(--muted)}
-    section{padding:76px 0;border-top:1px solid var(--line)}.section-head{max-width:720px;margin-bottom:34px}.section-head h2{font-size:34px;line-height:1.15;margin:8px 0 12px;letter-spacing:-.03em}.section-head p{color:var(--muted);margin:0}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}.card h3{margin:0 0 8px;font-size:19px}.card p{color:var(--muted);margin:0 0 15px}.taglist{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:12px;color:#c9d7e9;background:#ffffff0b;border:1px solid var(--line);border-radius:99px;padding:5px 10px}
-    .timeline{display:grid;gap:16px}.role{display:grid;grid-template-columns:190px 1fr;gap:26px}.date{color:var(--accent);font-size:13px;font-weight:700;padding-top:4px}.role h3{margin:0}.role .sub{color:var(--muted);font-size:14px;margin:3px 0 10px}.role ul{margin:0;padding-left:18px;color:var(--muted)}.role li{margin:5px 0}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skillbox{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:19px}.skillbox h3{font-size:15px;margin:0 0 10px;color:var(--accent)}
-    .edu{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.edu p{margin:4px 0;color:var(--muted)}.year{white-space:nowrap;color:var(--accent);font-size:14px}
-    .contact{background:linear-gradient(130deg,#13263a,#101a2b);border:1px solid var(--line);border-radius:18px;padding:36px;display:flex;justify-content:space-between;align-items:center;gap:24px}.contact h2{font-size:30px;margin:0 0 6px}.contact p{color:var(--muted);margin:0}
-    footer{padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px}
-    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:70px 0}.hero-card{max-width:480px}.skills{grid-template-columns:1fr 1fr}.navlinks{gap:13px}.navlinks a{font-size:12px}}
-    @media(max-width:560px){.wrap{width:min(100% - 30px,var(--max))}.navlinks a:nth-child(2),.navlinks a:nth-child(3){display:none}.grid,.skills{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:4px}.contact,.edu,footer{display:block}.year{display:block;margin-top:8px}.contact .btn{margin-top:20px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Eduardo Zau Luis — Electrical and Electronics Engineer specializing in electrical design, embedded systems, PCB development, industrial automation, and electronics testing.">
+
+    <meta name="author" content="Eduardo Zau Luis">
+
+    <meta name="theme-color" content="#090d14">
+
+    <title>Eduardo Luis | Electrical & Electronics Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header><nav class="wrap">
-  <a class="brand" href="#top">EDUARDO<span>.</span></a>
-  <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
-</nav></header>
-<main id="top">
-  <div class="wrap hero">
-    <div>
-      <div class="eyebrow">Electrical Engineer · Controls · Hardware</div>
-      <h1>Building reliable systems from <span>circuit to plant.</span></h1>
-      <p class="lead">I’m Eduardo Luis, an Electrical Engineer with hands-on experience supporting industrial electrical systems, equipment troubleshooting, controls, instrumentation, and embedded hardware development.</p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">Explore my work ↗</a>
-        <a class="btn" href="https://www.linkedin.com/in/eduardo-luis-742614238/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
-    </div>
-    <aside class="hero-card">
-      <div class="initials">EL</div>
-      <h3>Electrical Engineering</h3>
-      <p>Industrial maintenance · Electrical design · Testing & integration</p>
-      <div class="quickfacts">
-        <div class="fact"><strong>480 V</strong><small>Industrial systems exposure</small></div>
-        <div class="fact"><strong>PCB</strong><small>Design & hardware integration</small></div>
-        <div class="fact"><strong>PLC</strong><small>Ladder logic learning</small></div>
-        <div class="fact"><strong>BLE</strong><small>Embedded tracking project</small></div>
-      </div>
-    </aside>
-  </div>
 
-  <section id="about"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">01 / About</div><h2>Practical engineering. Continuous learning.</h2>
-      <p>My interests sit at the intersection of electrical design, industrial automation, electronics testing, and embedded systems. I enjoy understanding how equipment works, diagnosing problems methodically, and turning technical requirements into dependable solutions.</p>
-    </div>
-    <div class="grid">
-      <article class="card"><h3>What I bring</h3><p>Hands-on troubleshooting with electrical and electromechanical equipment, measurement instruments, motors, drives, control panels, and field devices.</p><div class="taglist"><span class="tag">Troubleshooting</span><span class="tag">Testing</span><span class="tag">Documentation</span></div></article>
-      <article class="card"><h3>What I’m developing</h3><p>Deeper capability in PLC programming, industrial automation, HMI/SCADA systems, PCB design, and embedded hardware.</p><div class="taglist"><span class="tag">PLC / Ladder Logic</span><span class="tag">Embedded Systems</span><span class="tag">Electrical Design</span></div></article>
-    </div>
-  </div></section>
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
 
-  <section id="experience"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">02 / Experience</div><h2>Industrial electrical experience</h2><p>Experience supporting electrical maintenance and troubleshooting in an industrial pipe manufacturing environment.</p></div>
-    <div class="timeline">
-      <article class="card role">
-        <div class="date">2026 – Present</div>
-        <div><h3>Electrical Engineer</h3><div class="sub">Jindal Pipe USA · Industrial manufacturing</div>
-          <ul>
-            <li>Support troubleshooting and maintenance of industrial electrical equipment and production systems.</li>
-            <li>Work with 380/480 V electrical systems, AC/DC motors, contactors, overload protection, sensors, and control-panel components.</li>
-            <li>Use electrical test instruments including multimeters, insulation testers (Megger), and phase-sequence testers to support diagnostics.</li>
-            <li>Build knowledge of PLC I/O, motor drives, ladder logic, and industrial automation systems.</li>
-          </ul>
+    <header class="site-header" id="top">
+
+        <nav class="nav container" aria-label="Main navigation">
+
+            <a href="#home" class="logo">
+                Eduardo<span> </span>Luis
+            </a>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#gallery">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==========================================
+             01. HERO SECTION
+        =========================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="eyebrow">
+                    Electrical & Electronics Engineer
+                </div>
+
+                <h1>
+                    Engineering ideas<br>
+                    into <span>working systems.</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    I'm Eduardo Zau Luis, an Electrical and Electronics Engineer
+                    with interests in electrical design, embedded systems,
+                    PCB development, industrial automation, and electronics testing.
+
+                    My work combines practical engineering, hardware development,
+                    troubleshooting, and continuous technical learning.
+
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#projects" class="btn btn-primary">
+                        Explore Projects
+                        <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Get In Touch
+                    </a>
+
+                    <a
+                        href="assets/resume/Eduardo_Luis_Resume.pdf"
+                        class="btn btn-outline"
+                        target="_blank"
+                        rel="noopener">
+
+                        Download Resume
+                        <span aria-hidden="true">↓</span>
+
+                    </a>
+
+                </div>
+
+                <div class="hero-meta">
+
+                    <span>Texas A&M University</span>
+
+                    <span>Baytown, Texas</span>
+
+                    <span>Electrical Engineering</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             02. ABOUT ME
+        =========================================== -->
+
+        <section class="section" id="about">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    01 / About Me
+                </div>
+
+                <h2 class="section-title">
+                    Engineering with a
+                    <span class="accent">hands-on approach.</span>
+                </h2>
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+
+                            I am an Electrical and Electronics Engineer with
+                            a Bachelor of Science in Electronic Systems
+                            Engineering Technology from Texas A&M University,
+                            where I graduated in May 2026.
+
+                        </p>
+
+                        <p>
+
+                            My technical interests include electrical system
+                            design, electronics, embedded systems, PCB
+                            development, industrial automation, instrumentation,
+                            and hardware testing.
+
+                        </p>
+
+                        <p>
+
+                            Through academic projects and industrial experience,
+                            I have developed practical exposure to electrical
+                            equipment, 380/480V power systems, AC/DC motors,
+                            variable frequency drives, transformers, control
+                            panels, sensors, and PLC-based automation.
+
+                        </p>
+
+                        <p>
+
+                            I currently work as an Electrical Engineer at
+                            Jindal Pipe USA, where I continue developing my
+                            experience in industrial electrical systems,
+                            equipment troubleshooting, and automation.
+
+                        </p>
+
+                        <p>
+
+                            Outside engineering, I enjoy music, playing
+                            instruments, soccer, video production, and
+                            participating in community activities.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- QUICK FACTS -->
+
+                    <aside class="about-panel">
+
+                        <h3 class="panel-heading">
+                            Quick Information
+                        </h3>
+
+                        <div class="info-row">
+                            <span>Full Name</span>
+                            <span>Eduardo Zau Luis</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Professional Title</span>
+                            <span>Electrical Engineer</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Location</span>
+                            <span>Baytown, Texas</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>University</span>
+                            <span>Texas A&M University</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Degree</span>
+                            <span>BS Electronic Systems Engineering Technology</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Graduation</span>
+                            <span>May 2026</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Languages</span>
+                            <span>English, French, Portuguese</span>
+                        </div>
+
+                        <div class="info-row">
+                            <span>Current Employer</span>
+                            <span>Jindal Pipe USA</span>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             03. PROFESSIONAL EXPERIENCE
+        =========================================== -->
+
+        <section class="section section-dark" id="experience">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    02 / Professional Experience
+                </div>
+
+                <h2 class="section-title">
+                    Professional
+                    <span class="accent">experience.</span>
+                </h2>
+
+                <p class="section-intro">
+
+                    My experience combines industrial electrical systems,
+                    engineering development, academic projects, and
+                    hands-on technical testing.
+
+                </p>
+
+
+                <div class="timeline">
+
+                    <!-- JINDAL PIPE USA -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026 — PRESENT
+                        </div>
+
+                        <h3>
+                            Electrical Engineer
+                        </h3>
+
+                        <h4 class="timeline-company">
+                            Jindal Pipe USA
+                        </h4>
+
+                        <p>
+
+                            Working in an industrial pipe manufacturing
+                            environment supporting electrical maintenance,
+                            equipment troubleshooting, and industrial
+                            electrical systems.
+
+                        </p>
+
+                        <p>
+
+                            Technical exposure includes 380/480V electrical
+                            systems, AC/DC motors, transformers, contactors,
+                            overload protection, motor starters, variable
+                            frequency drives, sensors, electrical panels,
+                            and industrial field wiring.
+
+                        </p>
+
+                        <p>
+
+                            Developing practical knowledge of PLC I/O,
+                            Siemens automation, motor control systems,
+                            Yaskawa drives, Allen-Bradley drives,
+                            and industrial control equipment.
+
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">380/480V Systems</span>
+                            <span class="tag">AC/DC Motors</span>
+                            <span class="tag">VFDs</span>
+                            <span class="tag">Yaskawa</span>
+                            <span class="tag">Siemens</span>
+                            <span class="tag">PLC I/O</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">HPUs</span>
+                            <span class="tag">Troubleshooting</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TEXAS A&M CAPSTONE -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-date">
+                            2026
+                        </div>
+
+                        <h3>
+                            Engineering Capstone — EcoTrace
+                        </h3>
+
+                        <h4 class="timeline-company">
+                            Texas A&M University
+                        </h4>
+
+                        <p>
+
+                            Contributed to a miniaturized wildlife tracking
+                            solution designed to combine GPS, Bluetooth
+                            Low Energy, embedded hardware, and a gateway
+                            communication system.
+
+                        </p>
+
+                        <p>
+
+                            Participated as a test engineer, contributing
+                            to hardware validation and system testing
+                            throughout the development process.
+
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">GPS</span>
+                            <span class="tag">Bluetooth Low Energy</span>
+                            <span class="tag">ESP32-S3</span>
+                            <span class="tag">Embedded Hardware</span>
+                            <span class="tag">PCB Testing</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             04. FEATURED ENGINEERING PROJECTS
+        =========================================== -->
+
+        <section class="section" id="projects">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    03 / Engineering Projects
+                </div>
+
+                <h2 class="section-title">
+                    Selected engineering
+                    <span class="accent">projects.</span>
+                </h2>
+
+                <p class="section-intro">
+
+                    A collection of engineering projects involving embedded
+                    hardware, PCB development, electronics testing,
+                    and system design.
+
+                </p>
+
+
+                <div class="grid projects-grid">
+
+
+                    <!-- PROJECT 01: ECOTRACE -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/ecotrace-pcb.png"
+                                alt="Eduardo holding the assembled EcoTrace wildlife tracking PCB"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 01 / CAPSTONE
+                            </div>
+
+                            <h3>
+                                EcoTrace Wildlife Tracking System
+                            </h3>
+
+                            <p>
+
+                                A miniaturized wildlife tracking solution
+                                combining GPS, Bluetooth Low Energy,
+                                embedded electronics, and a gateway system.
+
+                                The project explored hardware integration,
+                                wireless communication, and testing
+                                considerations for wildlife tracking.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">GPS</span>
+                                <span class="tag">BLE</span>
+                                <span class="tag">ESP32-S3</span>
+                                <span class="tag">PCB</span>
+                                <span class="tag">Testing</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02: CAMERA SYSTEM -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/camera-system-prototype.png"
+                                alt="Prototype of the two-way embedded camera communication system"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 02 / EMBEDDED SYSTEMS
+                            </div>
+
+                            <h3>
+                                Two-Way Embedded Camera System
+                            </h3>
+
+                            <p>
+
+                                Development of an ESP-based camera system
+                                concept involving camera interfacing,
+                                audio, memory, power management, and
+                                communication with a mobile application.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">ESP</span>
+                                <span class="tag">SPI</span>
+                                <span class="tag">Camera Interface</span>
+                                <span class="tag">Audio</span>
+                                <span class="tag">Memory</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03: CAMERA BLOCK DIAGRAM -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/camera-block-diagram.png"
+                                alt="Functional block diagram of the two-way camera system"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 03 / SYSTEM DESIGN
+                            </div>
+
+                            <h3>
+                                Camera System Functional Architecture
+                            </h3>
+
+                            <p>
+
+                                Functional system architecture illustrating
+                                the major subsystems, interfaces, and
+                                communication workflow of the two-way
+                                camera project.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">System Design</span>
+                                <span class="tag">Block Diagram</span>
+                                <span class="tag">Hardware Integration</span>
+                                <span class="tag">Communication</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04: CUSTOM LED DISPLAY -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/led-display.png"
+                                alt="Custom LED display hardware project"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 04 / ELECTRONICS
+                            </div>
+
+                            <h3>
+                                Custom LED Display
+                            </h3>
+
+                            <p>
+
+                                Hardware development and experimentation
+                                involving LED display electronics and
+                                circuit integration.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">Electronics</span>
+                                <span class="tag">LED Hardware</span>
+                                <span class="tag">Circuit Design</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 05: MSP432 / LAB TESTING -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/circuit-test.png"
+                                alt="Prototype circuit during electronics bench validation"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 05 / HARDWARE VALIDATION
+                            </div>
+
+                            <h3>
+                                Prototype Circuit Testing
+                            </h3>
+
+                            <p>
+
+                                Hands-on prototype validation and
+                                electronics testing, focusing on
+                                measurement, circuit behavior,
+                                and hardware verification.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">Circuit Testing</span>
+                                <span class="tag">Multimeter</span>
+                                <span class="tag">Electronics</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 06: MOTOR TESTING -->
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="assets/images/dc-motor-test.png"
+                                alt="Low-voltage DC motor laboratory testing"
+                                loading="lazy">
+
+                        </div>
+
+                        <div class="project-body">
+
+                            <div class="card-number">
+                                PROJECT 06 / ELECTRICAL MACHINES
+                            </div>
+
+                            <h3>
+                                DC Motor Laboratory Testing
+                            </h3>
+
+                            <p>
+
+                                Low-voltage DC motor experimentation
+                                involving electrical connections,
+                                motor operation, and practical
+                                laboratory measurements.
+
+                            </p>
+
+                            <div class="tags">
+
+                                <span class="tag">DC Motors</span>
+                                <span class="tag">Electrical Testing</span>
+                                <span class="tag">Measurements</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             05. TECHNICAL SKILLS
+        =========================================== -->
+
+        <section class="section section-dark" id="skills">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    04 / Technical Skills
+                </div>
+
+                <h2 class="section-title">
+                    Engineering tools &
+                    <span class="accent">technical knowledge.</span>
+                </h2>
+
+                <p class="section-intro">
+
+                    Technical areas and tools developed through academic
+                    projects, industrial exposure, laboratory work,
+                    and independent learning.
+
+                </p>
+
+
+                <div class="skills-grid">
+
+
+                    <!-- INDUSTRIAL SYSTEMS -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Industrial & Electrical Systems
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>380/480V Power Systems</span>
+                            <span>Electrical Troubleshooting</span>
+                            <span>AC Motors</span>
+                            <span>DC Motors</span>
+                            <span>Transformers</span>
+                            <span>Contactors</span>
+                            <span>Overload Protection</span>
+                            <span>Motor Starters</span>
+                            <span>Variable Frequency Drives</span>
+                            <span>Yaskawa Drives</span>
+                            <span>Allen-Bradley Drives</span>
+                            <span>Siemens Automation</span>
+                            <span>PLC I/O</span>
+                            <span>Control Panels</span>
+                            <span>Sensors</span>
+                            <span>Field Wiring</span>
+                            <span>Hydraulic Power Units</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ELECTRONICS AND EMBEDDED -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Electronics & Embedded Systems
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Circuit Analysis</span>
+                            <span>Analog Electronics</span>
+                            <span>Digital Electronics</span>
+                            <span>Embedded Systems</span>
+                            <span>Microcontrollers</span>
+                            <span>ESP32</span>
+                            <span>MSP432</span>
+                            <span>ADC</span>
+                            <span>Timers</span>
+                            <span>SPI</span>
+                            <span>Bluetooth Low Energy</span>
+                            <span>PCB Development</span>
+                            <span>Power Supplies</span>
+                            <span>Battery Monitoring</span>
+                            <span>Cell Balancing</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PCB AND CAD -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            PCB Design & Engineering Software
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>KiCad</span>
+                            <span>Altium Designer</span>
+                            <span>Cadence Allegro</span>
+                            <span>AutoCAD</span>
+                            <span>MATLAB</span>
+                            <span>Simulink</span>
+                            <span>Multisim</span>
+                            <span>LabVIEW</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LAB TESTING -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Laboratory Testing & Instrumentation
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Oscilloscope</span>
+                            <span>RF Network Analyzer</span>
+                            <span>Spectrum Analyzer</span>
+                            <span>LCR Meter</span>
+                            <span>Multimeter</span>
+                            <span>Megger</span>
+                            <span>Phase Sequence Tester</span>
+                            <span>NI TestStand</span>
+                            <span>Teradyne Eagle</span>
+                            <span>Hardware Validation</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRAMMING -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Programming & Automation
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Swift</span>
+                            <span>Assembly</span>
+                            <span>Ladder Logic</span>
+                            <span>Function Block Diagram</span>
+                            <span>Structured Text</span>
+                            <span>Siemens PLC</span>
+                            <span>CODESYS</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OTHER SOFTWARE -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Productivity & Engineering Tools
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>Microsoft Excel</span>
+                            <span>Power BI</span>
+                            <span>Microsoft Office</span>
+                            <span>GitHub</span>
+                            <span>Technical Documentation</span>
+                            <span>Engineering Testing</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p class="skill-note muted">
+
+                    Skills reflect a combination of hands-on experience,
+                    academic development, industrial exposure, and
+                    ongoing technical learning.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             06. EDUCATION
+        =========================================== -->
+
+        <section class="section" id="education">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    05 / Education
+                </div>
+
+                <h2 class="section-title">
+                    Academic
+                    <span class="accent">background.</span>
+                </h2>
+
+
+                <article class="card education-card">
+
+                    <div class="card-number">
+                        MAY 2026
+                    </div>
+
+                    <h3>
+                        Texas A&M University
+                    </h3>
+
+                    <p>
+                        Bachelor of Science in Electronic Systems
+                        Engineering Technology (ESET)
+                    </p>
+
+                    <p class="muted">
+                        Graduated May 2026
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">Electronic Systems</span>
+                        <span class="tag">Electrical Engineering</span>
+                        <span class="tag">Cybersecurity Minor</span>
+                        <span class="tag">Engineering Project Management Minor</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card education-card">
+
+                    <h3>
+                        Houston Community College
+                    </h3>
+
+                    <p>
+                        Electrical Engineering studies
+                    </p>
+
+                    <p class="muted">
+                        Honors · Phi Theta Kappa
+                    </p>
+
+                </article>
+
+
+                <h3 class="cert-heading">
+                    Certifications & Professional Development
+                </h3>
+
+                <div class="cert-list">
+
+                    <div class="cert">
+                        Lean Six Sigma Yellow Belt — Completed
+                    </div>
+
+                    <div class="cert">
+                        PLC Technician 2 — In Progress
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             07. LAB, FIELD & BEYOND GALLERY
+        =========================================== -->
+
+        <section class="section section-dark" id="gallery">
+
+            <div class="container">
+
+                <div class="eyebrow">
+                    06 / Lab, Field & Beyond
+                </div>
+
+                <h2 class="section-title">
+                    Engineering in
+                    <span class="accent">practice.</span>
+                </h2>
+
+                <p class="section-intro">
+
+                    A visual collection of laboratory experiments,
+                    electronics testing, industrial equipment,
+                    engineering projects, music, sports, and
+                    community involvement.
+
+                </p>
+
+
+                <!-- LAB AND FIELD PHOTOGRAPHS -->
+
+                <h3 class="gallery-category">
+                    Laboratory & Electronics Testing
+                </h3>
+
+                <div class="gallery-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/rf-network-analyzer.png"
+                            alt="Operating an RF network analyzer"
+                            loading="lazy">
+
+                        <figcaption>
+                            RF Network Analyzer — Laboratory Testing
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/lcr-meter-300khz.png"
+                            alt="Testing electronic components using a 300 kHz LCR meter"
+                            loading="lazy">
+
+                        <figcaption>
+                            Component Measurement — 300 kHz LCR Meter
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/temperature-plate-test.png"
+                            alt="Thermal testing using a temperature plate"
+                            loading="lazy">
+
+                        <figcaption>
+                            Thermal Testing — Temperature Plate
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/circuit-test.png"
+                            alt="Prototype circuit bench validation"
+                            loading="lazy">
+
+                        <figcaption>
+                            Prototype Circuit — Bench Validation
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/dc-motor-test.png"
+                            alt="Low-voltage DC motor laboratory experiment"
+                            loading="lazy">
+
+                        <figcaption>
+                            Low-Voltage DC Motor Testing
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/led-display.png"
+                            alt="Custom LED display hardware project"
+                            loading="lazy">
+
+                        <figcaption>
+                            Custom LED Display Hardware
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+
+                <!-- ENGINEERING VIDEOS -->
+
+                <h3 class="gallery-category">
+                    Engineering Demonstrations & Videos
+                </h3>
+
+                <div class="gallery-grid video-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <video muted
+                            controls
+                            muted
+                            playsinline
+                            preload="metadata"
+                            poster="assets/images/rf-network-analyzer.png">
+
+                            <source
+                                src="assets/videos/network-analyzer-demo.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support HTML5 video.
+
+                        </video>
+
+                        <figcaption>
+                            RF Network Analyzer — Demonstration
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <video muted
+                            controls
+                            muted
+                            playsinline
+                            preload="metadata">
+
+                            <source
+                                src="assets/videos/yaskawa-drive-demo.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support HTML5 video.
+
+                        </video>
+
+                        <figcaption>
+                            Yaskawa Drive — Industrial Motor Testing
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <video muted
+                            controls
+                            muted
+                            playsinline
+                            preload="metadata">
+
+                            <source
+                                src="assets/videos/lab-walkthrough.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support HTML5 video.
+
+                        </video>
+
+                        <figcaption>
+                            Electronics Testing Laboratory Walkthrough
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+
+                <!-- GRADUATION -->
+
+                <h3 class="gallery-category">
+                    Texas A&M University — Graduation
+                </h3>
+
+                <div class="gallery-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/graduation-1.jpg"
+                            alt="Eduardo Luis at Texas A&M University graduation"
+                            loading="lazy">
+
+                        <figcaption>
+                            Texas A&M University — Graduation
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/graduation-2.jpg"
+                            alt="Texas A&M University graduation portrait"
+                            loading="lazy">
+
+                        <figcaption>
+                            Bachelor of Science — ESET, May 2026
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+
+                <!-- COMMUNITY VOLUNTEERING -->
+
+                <h3 class="gallery-category">
+                    Community Involvement
+                </h3>
+
+                <div class="gallery-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/volunteering-1.jpg"
+                            alt="Participating in a community volunteering project"
+                            loading="lazy">
+
+                        <figcaption>
+                            Community Volunteering
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/volunteering-2.jpg"
+                            alt="Participating in a community construction project"
+                            loading="lazy">
+
+                        <figcaption>
+                            Community Service — Building Project
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+
+                <!-- MUSIC AND PERFORMANCES -->
+
+                <h3 class="gallery-category">
+                    Music & Live Performances
+                </h3>
+
+                <div class="gallery-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/concert-1.jpg"
+                            alt="Eduardo playing music on stage"
+                            loading="lazy">
+
+                        <figcaption>
+                            Live Music Performance
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/concert-2.jpg"
+                            alt="Eduardo performing live with musicians"
+                            loading="lazy">
+
+                        <figcaption>
+                            Live Music & Stage Performance
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/concert-dallas.jpg"
+                            alt="Live music performance in Dallas, Texas"
+                            loading="lazy">
+
+                        <figcaption>
+                            Live Performance — Dallas, Texas
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <video muted
+                            controls
+                            muted
+                            playsinline
+                            preload="metadata">
+
+                            <source
+                                src="assets/videos/bass-guitar.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support HTML5 video.
+
+                        </video>
+
+                        <figcaption>
+                            Bass Guitar Performance
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+
+                <!-- SOCCER -->
+
+                <h3 class="gallery-category">
+                    Soccer & Team Activities
+                </h3>
+
+                <div class="gallery-grid">
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/indoor-football-win.png"
+                            alt="Celebrating an indoor football tournament victory with teammates"
+                            loading="lazy">
+
+                        <figcaption>
+                            Indoor Football Tournament — Team Victory
+                        </figcaption>
+
+                    </figure>
+
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="assets/images/soccer-friend.jpg"
+                            alt="With a friend after a soccer match"
+                            loading="lazy">
+
+                        <figcaption>
+                            Soccer — After the Match
+                        </figcaption>
+
+                    </figure>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             08. CONTACT
+        =========================================== -->
+
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact">
+
+                    <div class="contact-content">
+
+                        <div class="eyebrow">
+                            07 / Contact
+                        </div>
+
+                        <h2 class="section-title">
+                            Let's connect.
+                        </h2>
+
+                        <p>
+
+                            I'm always interested in connecting with
+                            engineering professionals, exploring
+                            technical opportunities, and discussing
+                            electrical design, embedded systems,
+                            electronics, and industrial automation.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <!-- Replace with your professional email -->
+
+                        <a
+                            class="btn btn-primary"
+                            href="mailto:YOUR_EMAIL@example.com">
+
+                            Email Me ↗
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+
+                        <a
+                            class="btn btn-outline"
+                            href="https://www.linkedin.com/in/eduardo-luis-742614238/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            LinkedIn ↗
+
+                        </a>
+
+
+                        <!-- Replace with your actual GitHub profile -->
+
+                        <a
+                            class="btn btn-outline"
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            GitHub ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <div>
+                © <span id="currentYear"></span>
+                Eduardo Zau Luis. All rights reserved.
+            </div>
+
+            <div>
+                Electrical & Electronics Engineering Portfolio
+            </div>
+
+            <a href="#top" class="back-to-top">
+                Back to Top ↑
+            </a>
+
         </div>
-      </article>
-    </div>
-  </div></section>
 
-  <section id="projects"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">03 / Selected Projects</div><h2>Engineering projects</h2><p>Selected academic and technical work demonstrating design, integration, and test experience.</p></div>
-    <div class="grid">
-      <article class="card"><h3>EcoTrace — Miniaturized Wildlife Tracker</h3><p>Contributed as a test engineer to a lightweight wildlife tracking concept combining GPS and Bluetooth Low Energy. The system concept included an ESP32-S3 gateway, real-time clock, and mobile-phone BLE gateway workflow.</p><div class="taglist"><span class="tag">ESP32-S3</span><span class="tag">Bluetooth LE</span><span class="tag">GPS</span><span class="tag">System Testing</span></div></article>
-      <article class="card"><h3>Industrial Electrical Troubleshooting</h3><p>Hands-on work supporting diagnosis of motor, drive, starter, protection, and field-device issues in a manufacturing environment. Emphasis on safe isolation, measurements, and systematic fault-finding.</p><div class="taglist"><span class="tag">Motors</span><span class="tag">VFDs</span><span class="tag">Contactors</span><span class="tag">Electrical Safety</span></div></article>
-      <article class="card"><h3>Embedded Systems & Microcontroller Labs</h3><p>Developed low-level microcontroller skills through MSP432 work involving assembly, LCD interfacing, timers, ADC, and stepper-motor control.</p><div class="taglist"><span class="tag">MSP432</span><span class="tag">Assembly</span><span class="tag">ADC</span><span class="tag">Timers</span></div></article>
-      <article class="card"><h3>Battery Monitoring & Cell Balancing</h3><p>Worked with a BQ76920-based battery monitoring and balancing concept, building experience with battery measurement, protection, and electronics integration.</p><div class="taglist"><span class="tag">BQ76920</span><span class="tag">Battery Monitoring</span><span class="tag">Electronics</span></div></article>
-    </div>
-  </div></section>
+    </footer>
 
-  <section id="skills"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">04 / Technical Skills</div><h2>Tools, systems & capabilities</h2></div>
-    <div class="skills">
-      <div class="skillbox"><h3>Electrical & Industrial</h3><div class="taglist"><span class="tag">Circuit Analysis</span><span class="tag">480 V Systems</span><span class="tag">AC/DC Motors</span><span class="tag">Contactors & OLRs</span><span class="tag">Sensors</span><span class="tag">VFDs</span></div></div>
-      <div class="skillbox"><h3>Controls & Embedded</h3><div class="taglist"><span class="tag">PLC Fundamentals</span><span class="tag">Ladder Logic</span><span class="tag">MSP432</span><span class="tag">ESP32</span><span class="tag">BLE</span><span class="tag">ADC / Timers</span></div></div>
-      <div class="skillbox"><h3>Software & Test</h3><div class="taglist"><span class="tag">AutoCAD</span><span class="tag">Altium</span><span class="tag">MATLAB / Simulink</span><span class="tag">Multisim</span><span class="tag">LabVIEW</span><span class="tag">Oscilloscope</span></div></div>
-    </div>
-  </div></section>
 
-  <section id="education"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">05 / Education</div><h2>Education</h2></div>
-    <div class="card edu"><div><h3>B.S. Electronic Systems Engineering Technology</h3><p>Texas A&M University</p><p>Minors: Cybersecurity and Engineering Project Management</p></div><div class="year">May 2026</div></div>
-    <div style="height:14px"></div>
-    <div class="card edu"><div><h3>Associate-level studies in Electrical Engineering</h3><p>Houston Community College</p><p>Honors · Phi Theta Kappa</p></div></div>
-  </div></section>
+    <!-- ==========================================
+         JAVASCRIPT — MOBILE NAVIGATION
+    =========================================== -->
 
-  <section id="contact"><div class="wrap">
-    <div class="contact"><div><div class="eyebrow">06 / Contact</div><h2>Let’s connect.</h2><p>Open to opportunities in electrical engineering, electrical design, controls, and hardware testing.</p></div>
-      <a class="btn primary" href="https://www.linkedin.com/in/eduardo-luis-742614238/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
-    </div>
-  </div></section>
-</main>
-<footer class="wrap"><span>© <span id="year"></span> Eduardo Luis</span><span>Electrical Engineering Portfolio</span></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+
+        const navLinks = document.getElementById("navLinks");
+
+        const navigationLinks = navLinks.querySelectorAll("a");
+
+
+        // Toggle mobile navigation
+
+        menuBtn.addEventListener("click", function () {
+
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuBtn.classList.toggle("active", isOpen);
+
+            menuBtn.setAttribute("aria-expanded", isOpen);
+
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+        });
+
+
+        // Close navigation after selecting a section
+
+        navigationLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("open");
+
+                menuBtn.classList.remove("active");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+
+                menuBtn.setAttribute("aria-label", "Open navigation menu");
+
+            });
+
+        });
+
+
+        // Close menu when clicking outside navigation
+
+        document.addEventListener("click", function (event) {
+
+            const clickedInsideNavigation =
+                menuBtn.contains(event.target) ||
+                navLinks.contains(event.target);
+
+            if (!clickedInsideNavigation) {
+
+                navLinks.classList.remove("open");
+
+                menuBtn.classList.remove("active");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+
+                menuBtn.setAttribute("aria-label", "Open navigation menu");
+
+            }
+
+        });
+
+
+        // Automatically update copyright year
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+
+    </script>
+
 </body>
+
 </html>
