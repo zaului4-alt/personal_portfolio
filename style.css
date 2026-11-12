@@ -2922,3 +2922,89 @@ h1, h2, h3, h4,
         transition: none;
     }
 }
+
+/* GROUPED LIGHTBOX NAVIGATION */
+.lightbox-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.lightbox-nav {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 50%;
+    background: rgba(255,255,255,.1);
+    color: white;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-nav:hover {
+    background: var(--premium-accent);
+    color: #07110f;
+}
+
+.lightbox-nav[hidden] {
+    display: none;
+}
+
+.lightbox-counter {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+@media (max-width: 580px) {
+    .lightbox-viewer {
+        gap: 7px;
+    }
+
+    .lightbox-nav {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+        font-size: 25px;
+    }
+}
+
+/* Keep grouped MSP432 photos hidden until opened in lightbox */
+.msp432-gallery img[hidden] {
+    display: none !important;
+}
+
+/* MSP432 slideshow transitions */
+.msp432-gallery img.gallery-fade {
+    animation: msp432Fade 850ms ease both;
+}
+.msp432-gallery img.gallery-zoom-in {
+    animation: msp432ZoomIn 1100ms ease both;
+}
+.msp432-gallery img.gallery-zoom-out {
+    animation: msp432ZoomOut 1100ms ease both;
+}
+.msp432-gallery img.gallery-slide {
+    animation: msp432Slide 850ms ease both;
+}
+
+@keyframes msp432Fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes msp432ZoomIn {
+    from { opacity: .5; transform: scale(1.09); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes msp432ZoomOut {
+    from { opacity: .5; transform: scale(.92); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes msp432Slide {
+    from { opacity: .5; transform: translateX(18px) scale(1.02); }
+    to { opacity: 1; transform: translateX(0) scale(1); }
+}
