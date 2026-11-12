@@ -2974,21 +2974,21 @@ h1, h2, h3, h4,
 }
 
 /* Keep grouped MSP432 photos hidden until opened in lightbox */
-.msp432-gallery img[hidden] {
+.engineering-gallery img[hidden] {
     display: none !important;
 }
 
 /* MSP432 slideshow transitions */
-.msp432-gallery img.gallery-fade {
+.engineering-gallery img.gallery-fade {
     animation: msp432Fade 850ms ease both;
 }
-.msp432-gallery img.gallery-zoom-in {
+.engineering-gallery img.gallery-zoom-in {
     animation: msp432ZoomIn 1100ms ease both;
 }
-.msp432-gallery img.gallery-zoom-out {
+.engineering-gallery img.gallery-zoom-out {
     animation: msp432ZoomOut 1100ms ease both;
 }
-.msp432-gallery img.gallery-slide {
+.engineering-gallery img.gallery-slide {
     animation: msp432Slide 850ms ease both;
 }
 
@@ -3007,4 +3007,126 @@ h1, h2, h3, h4,
 @keyframes msp432Slide {
     from { opacity: .5; transform: translateX(18px) scale(1.02); }
     to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+/* Engineering gallery idle movement */
+.engineering-gallery img:not([hidden]):not(.gallery-fade):not(.gallery-zoom-in):not(.gallery-zoom-out):not(.gallery-slide) {
+    animation: engineeringIdleZoom 7s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes engineeringIdleZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.055); }
+}
+
+/* Engineering lightbox thumbnail selector */
+.lightbox-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    width: min(100%, 850px);
+    margin: 16px auto 4px;
+    padding: 5px 3px 10px;
+    overflow-x: auto;
+}
+
+.lightbox-thumbnails[hidden] {
+    display: none;
+}
+
+.lightbox-thumbnail {
+    flex: 0 0 76px;
+    width: 76px;
+    height: 58px;
+    padding: 3px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 7px;
+    background: rgba(255,255,255,.06);
+    cursor: pointer;
+    opacity: .65;
+    transition: opacity .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.lightbox-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.lightbox-thumbnail:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.lightbox-thumbnail.active {
+    opacity: 1;
+    border: 2px solid var(--premium-accent);
+}
+
+@media (max-width: 580px) {
+    .lightbox-thumbnails {
+        justify-content: flex-start;
+    }
+
+    .lightbox-thumbnail {
+        flex-basis: 64px;
+        width: 64px;
+        height: 50px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .engineering-gallery img:not([hidden]) {
+        animation: none;
+    }
+}
+
+
+/* Keep inactive soccer slideshow photos hidden */
+.soccer-slideshow img[hidden] {
+    display: none !important;
+}
+
+
+/* Keep the final-game video clearly visible inside the soccer card */
+.soccer-slideshow .soccer-final-video {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background: #05080d;
+    position: relative;
+    z-index: 2;
+}
+
+/* Keep both soccer gallery cards equal in size */
+.gallery-grid > .gallery-item.soccer-slideshow {
+    grid-column: span 6 !important;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid > .gallery-item.soccer-slideshow {
+        grid-column: span 12 !important;
+    }
+}
+\n
+/* Music gallery: equal-width cards and hidden slideshow photos */
+.gallery-grid > .gallery-item.music-slideshow {
+    grid-column: span 6 !important;
+}
+
+.music-slideshow img[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid > .gallery-item.music-slideshow {
+        grid-column: span 12 !important;
+    }
 }
