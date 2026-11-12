@@ -2067,17 +2067,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const photos = Array.from(gallery.querySelectorAll("img"));
     if (photos.length < 2) return;
 
+    const effects = ["gallery-fade", "gallery-zoom-in", "gallery-zoom-out", "gallery-slide"];
     let current = 0;
 
     setInterval(() => {
         if (gallery.matches(":hover") || gallery.contains(document.activeElement)) return;
 
         photos[current].hidden = true;
+        photos[current].classList.remove(...effects);
+
         current = (current + 1) % photos.length;
-        photos[current].hidden = false;
+        const next = photos[current];
+
+        next.classList.remove(...effects);
+        next.hidden = false;
+
+        // Occasionally use a clean cut; otherwise choose a random transition.
+        if (Math.random() > 0.2) {
+            const effect = effects[Math.floor(Math.random() * effects.length)];
+            next.classList.add(effect);
+        }
     }, 3000);
-})();
-</script>
+})();</script>
 \n</body>
 
 </html>
