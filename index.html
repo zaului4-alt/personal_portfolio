@@ -19,9 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
@@ -38,7 +36,10 @@
         <nav class="nav container" aria-label="Main navigation">
 
             <a href="#home" class="logo">
-                Eduardo<span> </span>Luis
+                <img class="logo-avatar"
+                     src="assets/images/graduation-1.jpg"
+                     alt="Eduardo Luis">
+                <span class="logo-name">Eduardo Luis</span>
             </a>
 
             <button
@@ -99,6 +100,11 @@
         =========================================== -->
 
         <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline
+                preload="metadata" aria-hidden="true" tabindex="-1">
+                <source src="assets/videos/yaskawa-drive-demo.mp4" type="video/mp4">
+            </video>
+
 
             <div class="container hero-content">
 
@@ -180,52 +186,46 @@
 
                 <div class="about-grid">
 
-                    <div class="about-text">
+
+                    <!-- PERSONAL PROFILE PORTRAIT -->
+                    <figure class="about-portrait-card">
+                        <div class="portrait-image-wrap">
+                            <img
+                                src="assets/images/graduation-2.jpg"
+                                alt="Eduardo Zau Luis at Texas A&M University graduation"
+                                loading="lazy">
+                            <div class="portrait-accent"></div>
+                        </div>
+                        <figcaption>
+                            <strong>Eduardo Zau Luis</strong>
+                            <span>Texas A&M University · Class of 2026</span>
+                            <span class="portrait-status">
+                                <i></i> Electrical & Electronics Engineer
+                            </span>
+                        </figcaption>
+                    </figure>
+
+<div class="about-text">
 
                         <p>
+    I am an Electrical Engineer with a Bachelor of Science in Electronic Systems Engineering Technology from Texas A&M University, where I graduated in May 2026.
+</p>
 
-                            I am an Electrical and Electronics Engineer with
-                            a Bachelor of Science in Electronic Systems
-                            Engineering Technology from Texas A&M University,
-                            where I graduated in May 2026.
+<p>
+    My background combines electrical engineering fundamentals with hands-on experience in industrial equipment, electronics, embedded systems, PCB design, instrumentation, and hardware testing.
+</p>
 
-                        </p>
+<p>
+    In industrial environments, I have worked with 380/480V electrical systems, AC/DC motors, transformers, contactors, overload protection, variable frequency drives, control panels, and industrial sensors. I also have exposure to PLC systems, I/O troubleshooting, and automation technologies.
+</p>
 
-                        <p>
+<p>
+    I currently work as an Electrical Engineer at Jindal Pipe USA, supporting industrial electrical maintenance, equipment troubleshooting, and reliability while continuing to develop my skills in controls and automation.
+</p>
 
-                            My technical interests include electrical system
-                            design, electronics, embedded systems, PCB
-                            development, industrial automation, instrumentation,
-                            and hardware testing.
-
-                        </p>
-
-                        <p>
-
-                            Through academic projects and industrial experience,
-                            I have developed practical exposure to electrical
-                            equipment, 380/480V power systems, AC/DC motors,
-                            variable frequency drives, transformers, control
-                            panels, sensors, and PLC-based automation.
-
-                        </p>
-
-                        <p>
-
-                            I currently work as an Electrical Engineer at
-                            Jindal Pipe USA, where I continue developing my
-                            experience in industrial electrical systems,
-                            equipment troubleshooting, and automation.
-
-                        </p>
-
-                        <p>
-
-                            Outside engineering, I enjoy music, playing
-                            instruments, soccer, video production, and
-                            participating in community activities.
-
-                        </p>
+<p>
+    Beyond engineering, I enjoy music, playing instruments, soccer, video production, and community activities.
+</p>
 
                     </div>
 
@@ -851,6 +851,30 @@
                             <span>Simulink</span>
                             <span>Multisim</span>
                             <span>LabVIEW</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROGRAMMING AND AUTOMATION -->
+
+                    <div class="skill-group">
+
+                        <h3>
+                            Programming & Industrial Automation
+                        </h3>
+
+                        <div class="skill-list">
+
+                            <span>PLC Ladder Logic</span>
+                            <span>Structured Text</span>
+                            <span>Siemens SIMATIC Manager</span>
+                            <span>CODESYS</span>
+                            <span>PLC I/O Mapping</span>
+                            <span>Motor Control Logic</span>
+                            <span>Embedded C</span>
+                            <span>Microcontroller Programming</span>
 
                         </div>
 
@@ -1518,7 +1542,15 @@
 
         </section>
 
-    </main>
+
+    <dialog class="lightbox" id="imageLightbox">
+        <button class="lightbox-close" id="lightboxClose"
+            aria-label="Close image viewer">×</button>
+        <img id="lightboxImage" src="" alt="">
+        <p id="lightboxCaption"></p>
+    </dialog>
+
+</main>
 
 
     <!-- ==========================================
@@ -1627,6 +1659,133 @@
 
 
     </script>
+
+
+<script>
+// Cinematic portfolio interactions
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Scroll reveal animations
+    const revealItems = document.querySelectorAll(
+        ".section-title, .section-intro, .project-card, " +
+        ".skill-group, .gallery-item, .timeline-item, .education-card"
+    );
+
+    if ("IntersectionObserver" in window) {
+        document.body.classList.add("motion-ready");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(item => {
+            item.classList.add("reveal-item");
+            observer.observe(item);
+        });
+    }
+
+    // Image lightbox
+    const lightbox = document.getElementById("imageLightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    if (lightbox && lightboxImage && lightboxClose) {
+        document.querySelectorAll(
+            ".gallery-item img, .project-image img"
+        ).forEach(img => {
+            img.classList.add("zoomable");
+
+            img.addEventListener("click", () => {
+                lightboxImage.src = img.currentSrc || img.src;
+                lightboxImage.alt = img.alt;
+
+                const caption = img.closest("figure")
+                    ?.querySelector("figcaption");
+
+                lightboxCaption.textContent =
+                    caption?.textContent.trim() || img.alt;
+
+                lightbox.showModal();
+            });
+        });
+
+        lightboxClose.addEventListener("click", () => lightbox.close());
+
+        lightbox.addEventListener("click", event => {
+            if (event.target === lightbox) lightbox.close();
+        });
+    }
+
+    // Reading progress indicator
+    function updateProgress() {
+        const available = document.documentElement.scrollHeight -
+            window.innerHeight;
+
+        const progress = available > 0
+            ? window.scrollY / available : 0;
+
+        document.documentElement.style.setProperty(
+            "--scroll-progress", progress
+        );
+    }
+
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Improve loading and presentation of all media
+    document.querySelectorAll("img").forEach(img => {
+        img.loading = "lazy";
+        img.decoding = "async";
+        img.classList.add("premium-image");
+    });
+
+    // Keep every video silent
+    document.querySelectorAll("video").forEach(video => {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.setAttribute("muted", "");
+        video.setAttribute("playsinline", "");
+
+        if (!video.classList.contains("hero-video")) {
+            video.preload = "metadata";
+            video.classList.add("premium-video");
+
+            const card = video.closest(".gallery-item");
+            if (card) card.classList.add("has-video");
+
+            // Muted hover preview on desktop
+            video.addEventListener("pointerenter", () => {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    video.play().catch(() => {});
+                }
+            });
+
+            video.addEventListener("pointerleave", () => {
+                if (window.matchMedia("(hover: hover)").matches) {
+                    video.pause();
+                }
+            });
+        }
+    });
+
+    // Add image styling to gallery items
+    document.querySelectorAll(".gallery-item img").forEach(img => {
+        img.closest(".gallery-item")?.classList.add("has-image");
+    });
+});
+</script>
 
 </body>
 
