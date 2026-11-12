@@ -71,7 +71,10 @@
                 </li>
 
                 <li>
-                    <a href="#skills">Skills</a>
+                    <a href="#ecotrace-case-study">EcoTrace</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
                 </li>
 
                 <li>
@@ -462,12 +465,13 @@
                     <article class="card project-card">
 
                         <div class="project-image">
-
-                            <img
-                                src="assets/images/ecotrace-pcb.png"
-                                alt="Eduardo holding the assembled EcoTrace wildlife tracking PCB"
-                                loading="lazy">
-
+                            <a href="#ecotrace-case-study"
+                               aria-label="View the EcoTrace engineering case study">
+                                <img class="ecotrace-project-image"
+                                    src="assets/images/ecotrace-pcb.png"
+                                    alt="Eduardo holding the assembled EcoTrace wildlife tracking PCB"
+                                    loading="lazy">
+                            </a>
                         </div>
 
                         <div class="project-body">
@@ -744,7 +748,140 @@
              05. TECHNICAL SKILLS
         =========================================== -->
 
-        <section class="section section-dark" id="skills">
+        
+        <!-- ECOTRACE ENGINEERING CASE STUDY -->
+
+        <section class="section section-dark ecotrace-case-study" id="ecotrace-case-study">
+
+            <div class="container">
+
+                <div class="eyebrow">ENGINEERING CASE STUDY / 01</div>
+
+                <h2 class="section-title">EcoTrace Wildlife Tracking System</h2>
+
+                <p class="ecotrace-intro">
+                    A miniaturized wildlife tracking concept combining GPS,
+                    Bluetooth Low Energy, embedded electronics, and gateway
+                    communication for urban wildlife monitoring.
+                </p>
+
+                <div class="ecotrace-feature-grid">
+
+                    <div class="ecotrace-image">
+                        <img src="assets/images/ecotrace-pcb.png"
+                             alt="EcoTrace wildlife tracking PCB"
+                             loading="lazy">
+                        <span class="ecotrace-image-caption">
+                            ECOTRACE / HARDWARE DEVELOPMENT
+                        </span>
+                    </div>
+
+                    <div class="ecotrace-overview">
+
+                        <div class="card-number">PROJECT OVERVIEW</div>
+
+                        <h3>Engineering a compact tracking solution</h3>
+
+                        <p>
+                            This Texas A&M engineering capstone explored a
+                            compact tracking platform designed around size,
+                            power consumption, wireless communication, and
+                            practical deployment requirements.
+                        </p>
+
+                        <p>
+                            The proposed system combined GPS positioning,
+                            Bluetooth Low Energy communication, an iPhone
+                            gateway, and an ESP32-S3 hub with a real-time clock.
+                        </p>
+
+                        <div class="tags">
+                            <span class="tag">GPS</span>
+                            <span class="tag">BLE</span>
+                            <span class="tag">ESP32-S3</span>
+                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">PCB</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ecotrace-details-grid">
+
+                    <article class="ecotrace-detail">
+                        <span class="card-number">01 / SYSTEM ARCHITECTURE</span>
+                        <h3>Wireless communication</h3>
+                        <p>
+                            GPS positioning and Bluetooth Low Energy formed
+                            the foundation of the tracking concept. The
+                            architecture included an iPhone BLE gateway and
+                            an ESP32-S3 hub with an RTC.
+                        </p>
+                    </article>
+
+                    <article class="ecotrace-detail">
+                        <span class="card-number">02 / HARDWARE DEVELOPMENT</span>
+                        <h3>Embedded electronics</h3>
+                        <p>
+                            The project involved compact electronic hardware,
+                            PCB integration, component selection, and
+                            consideration of power requirements for a
+                            miniaturized tracking device.
+                        </p>
+                    </article>
+
+                    <article class="ecotrace-detail">
+                        <span class="card-number">03 / MY CONTRIBUTION</span>
+                        <h3>Testing and validation</h3>
+                        <p>
+                            Served as a test engineer, contributing to
+                            hardware validation and system testing while
+                            evaluating integration and operational
+                            considerations.
+                        </p>
+                    </article>
+
+                </div>
+
+                <div class="ecotrace-targets">
+
+                    <div class="ecotrace-target-heading">
+                        <div class="card-number">DESIGN TARGETS</div>
+                        <h3>Engineering constraints</h3>
+                        <p>
+                            These figures represent project design objectives,
+                            not independently verified final results.
+                        </p>
+                    </div>
+
+                    <div class="ecotrace-target">
+                        <strong>&lt; 10 g</strong>
+                        <span>Target tracker mass</span>
+                    </div>
+
+                    <div class="ecotrace-target">
+                        <strong>&gt; 6 months</strong>
+                        <span>Target battery life</span>
+                    </div>
+
+                    <div class="ecotrace-target">
+                        <strong>&lt; 5%</strong>
+                        <span>Target animal body-mass ratio</span>
+                    </div>
+
+                </div>
+
+                <div class="ecotrace-footer">
+                    <span>Texas A&M University · Engineering Capstone · 2026</span>
+                    <a href="#projects" class="btn btn-outline">Back to Projects</a>
+                </div>
+
+            </div>
+
+        </section>
+
+<section class="section section-dark" id="skills">
 
             <div class="container">
 
@@ -1697,7 +1834,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (lightbox && lightboxImage && lightboxClose) {
         document.querySelectorAll(
-            ".gallery-item img, .project-image img"
+            ".gallery-item img, .project-image img:not(.ecotrace-project-image)"
         ).forEach(img => {
             img.classList.add("zoomable");
 
